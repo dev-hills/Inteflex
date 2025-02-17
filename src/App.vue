@@ -20,6 +20,7 @@ const isActiveRoute = (path) => computed(() => route.path === path)
       <RouterLink to="/">
         <img src="@/assets/logo.svg" alt="Vue logo" />
       </RouterLink>
+
       <div class="flex flex-row items-center gap-[30px]">
         <div
           class="flex flex-row items-center gap-[30px] border-[1px] border-[#DAD8D8] border-y-0 border-l-0 pr-[40px]"
