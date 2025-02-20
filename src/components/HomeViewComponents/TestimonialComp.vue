@@ -40,9 +40,9 @@ export default {
         class="relative w-[350px] rounded-[8px] shadow-[0_10px_20px_0_#29292A12] py-[60px] mt-[24px]"
       >
         <div class="opacity-[30%] w-[16px] h-[16px] absolute top-[115px] left-[30px]">
-          <img src="../assets/quote.png" alt="" />
+          <img src="../../assets/quote.png" alt="" />
         </div>
-        <img src="../assets//Testimonial_logos/CLI.png" alt="" class="ml-[64px]" />
+        <img src="../../assets/Testimonial_logos/CLI.png" alt="" class="ml-[64px]" />
         <h3 class="ml-[64px] mr-[32px] leading-[32px]">
           Thanks to Inteflex Global, our water purification processes have become more efficient.
           Their support team is always ready to help, and their solutions have truly made a
@@ -60,10 +60,10 @@ export default {
         class="relative w-[445px] h-[340px] rounded-[8px] shadow-[0_10px_20px_0_#29292A12] py-[30px]"
       >
         <div class="opacity-[30%] w-[16px] h-[16px] absolute top-[125px] left-[30px]">
-          <img src="../assets/quote.png" alt="" />
+          <img src="../../assets/quote.png" alt="" />
         </div>
 
-        <img src="../assets//Testimonial_logos/JPNL.png" alt="" class="ml-[64px]" />
+        <img src="../../assets/Testimonial_logos/JPNL.png" alt="" class="ml-[64px]" />
 
         <h3 class="mt-[15px] ml-[64px] mr-[32px] leading-[32px]">
           The chemical solutions we’ve implemented from Inteflex Global have enhanced the quality
@@ -80,9 +80,9 @@ export default {
         class="relative w-[350px] rounded-[8px] shadow-[0_10px_20px_0_#29292A12] py-[60px] mt-[32px]"
       >
         <div class="opacity-[30%] w-[16px] h-[16px] absolute top-[120px] left-[30px]">
-          <img src="../assets/quote.png" alt="" />
+          <img src="../../assets/quote.png" alt="" />
         </div>
-        <img src="../assets//Testimonial_logos/LOB.png" alt="" class="ml-[64px]" />
+        <img src="../../assets/Testimonial_logos/LOB.png" alt="" class="ml-[64px]" />
         <h3 class="ml-[64px] mr-[32px] leading-[32px]">
           Working with Inteflex Global has improved our crop yields and soil health significantly.
           Their expertise has been essential to our commitment to sustainable farming practices.
