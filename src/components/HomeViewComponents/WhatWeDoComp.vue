@@ -1,9 +1,9 @@
 <template>
   <div class="pt-[140px]">
-    <div class="flex flex-row items-center gap-[60px] justify-between">
+    <div class="flex flex-row sm:flex-col items-center gap-[60px] justify-between">
       <img src="@/assets/logo.svg" alt="" class="w-[570px]" />
 
-      <div class="w-[45%]">
+      <div class="w-[45%] sm:w-[100%]">
         <h1 class="text-[48px] text-[#18191F] font-bold">What We Do</h1>
         <p class="font-medium text-[18px] text-[#555555] leading-[30px]my-[9px]">
           At Inteflex Global, we specialize in creating and delivering high-performance chemical

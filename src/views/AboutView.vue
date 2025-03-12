@@ -8,11 +8,15 @@ import ProductComp from '@/components/HomeViewComponents/ProductComp.vue'
 
 <template>
   <main>
-    <main class="px-[112px] z-[1000] pt-[200px] py-[41px] w-[100%]">
-      <div class="flex flex-row items-center justify-between gap-[100px] w-[100%]">
-        <div class="w-[50%]">
-          <h1 class="text-[#2E3192] font-bold text-[64px] leading-[64px]">About Us</h1>
-          <h2 class="text-[#141414] font-semibold text-[40px] leading-[58px] capitalize my-[20px]">
+    <main class="px-[112px] sm:px-[20px] z-[1000] pt-[200px] sm:pt-[150px] py-[41px] w-[100%]">
+      <div class="flex flex-row sm:flex-col items-center justify-between gap-[100px] w-[100%]">
+        <div class="w-[50%] sm:w-[100%]">
+          <h1 class="text-[#2E3192] font-bold text-[64px] sm:text-[48px] leading-[64px]">
+            About Us
+          </h1>
+          <h2
+            class="text-[#141414] font-semibold text-[40px] sm:text-[30px] leading-[58px] sm:leading-[40px] capitalize my-[20px]"
+          >
             Driving <span class="text-[#ED008C] font-bold">innovation</span> through chemistry to
             power industries worldwide.
           </h2>
@@ -25,15 +29,15 @@ import ProductComp from '@/components/HomeViewComponents/ProductComp.vue'
           </p>
         </div>
 
-        <img src="@/assets/WorldMap.svg" alt="" class="w-[50%]" />
+        <img src="@/assets/WorldMap.svg" alt="" class="w-[50%] sm:w-[100%]" />
       </div>
 
       <MissionVisionComp />
 
       <OurValuesComp />
 
-      <div class="mt-[120px] my-[60px] flex flex-row items-center gap-[53px]">
-        <div class="w-[50%]">
+      <div class="mt-[120px] my-[60px] flex flex-row sm:flex-col items-center gap-[53px]">
+        <div class="w-[50%] sm:w-[100%]">
           <h1 class="font-semibold text-[48px] text-[#141414]">Meet Our CEO</h1>
           <h2 class="font-semibold text-[30px] text-[#141414] my-[16px]">Tony Osadunkwu</h2>
 
@@ -45,7 +49,7 @@ import ProductComp from '@/components/HomeViewComponents/ProductComp.vue'
           </p>
         </div>
 
-        <img src="../assets/CEOPlaceholder.svg" alt="" />
+        <img src="../assets/CEO.jpg" alt="" class="w-[50%] sm:w-[100%] rounded-lg"/>
       </div>
 
       <ProductComp />

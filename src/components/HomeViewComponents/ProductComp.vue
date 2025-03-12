@@ -1,10 +1,10 @@
-<script></script>
+<script setup></script>
 
 <template>
   <div class="pt-[60px]">
     <h1 class="font-extrabold text-[48px] text-[#18191F] mb-[40px]">Our Products</h1>
     <div class="flex flex-col items-center">
-      <div class="flex flex-row items-center justify-between gap-[24px]">
+      <div class="flex flex-row sm:flex-col items-center justify-between gap-[24px]">
         <div
           class="pt-[24px] px-[24px] pb-[32px] rounded-[8px] w-[384px] h-0[500px] shadow-[0_10px_16px_-2px_#10182814]"
         >

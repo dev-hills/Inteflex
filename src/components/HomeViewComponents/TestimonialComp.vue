@@ -19,10 +19,10 @@ export default {
 </script>
 
 <template>
-  <div class="pt-[140px] relative flex flex-row items-center justify-center gap-[30px]">
-    <div class="w-[35%] flex flex-col items-end">
+  <div class="pt-[140px] relative flex flex-row sm:flex-col items-center justify-center gap-[30px]">
+    <div class="w-[35%] sm:w-[100%] flex flex-col items-end">
       <div class="relative">
-        <div class="opacity-[30%] absolute top-[-55px] left-[-94px]">
+        <div class="opacity-[30%] absolute top-[-55px] left-[-94px] sm:hidden">
           <QuoteMark />
         </div>
 
@@ -57,7 +57,7 @@ export default {
 
     <div class="">
       <div
-        class="relative w-[445px] h-[340px] rounded-[8px] shadow-[0_10px_20px_0_#29292A12] py-[30px]"
+        class="relative w-[445px] h-[340px] rounded-[8px] shadow-[0_10px_20px_0_#29292A12] py-[30px] sm:w-[100%]"
       >
         <div class="opacity-[30%] w-[16px] h-[16px] absolute top-[125px] left-[30px]">
           <img src="../../assets/quote.png" alt="" />
@@ -95,15 +95,15 @@ export default {
     </div>
   </div>
 
-  <div class="pt-[60px] flex flex-row items-center justify-between">
-    <div class="w-[40%]">
+  <div class="pt-[60px] flex flex-row sm:flex-col items-center justify-between">
+    <div class="w-[40%] sm:w-[100%]">
       <h1 class="font-extrabold text-[#18191F] text-[48px]">We serve millions Globally</h1>
       <p class="font-normal text-[18px] text-[#18191F]">
         Trusted by millions globally, including leading companies across various industries.
       </p>
     </div>
 
-    <div class="w-[40%] flex flex-row flex-wrap items-center gap-[60px] gap-y-[5px]">
+    <div class="w-[40%] sm:w-[100%] flex flex-row  flex-wrap items-center gap-[60px] gap-y-[5px] mt-[50px]">
       <JPNL />
       <KoraneIcon />
       <NadineIcon />

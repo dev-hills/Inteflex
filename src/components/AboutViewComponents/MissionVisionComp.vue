@@ -1,8 +1,8 @@
 <template>
-  <main class="pt-[100px] flex flex-row items-center gap-[77px] w-[100%]">
-    <img src="@/assets/VisionMissionImg.svg" alt="" class="w-[50%]" />
+  <main class="pt-[100px] flex flex-row sm:flex-col items-center gap-[77px] w-[100%]">
+    <img src="@/assets/VisionMissionImg.svg" alt="" class="w-[50%] sm:w-[100%]" />
 
-    <div class="w-[50%]">
+    <div class="w-[50%] sm:w-[100%]">
       <div>
         <h1 class="font-bold text-[48px] text-[#141414] leading-[58px]">
           Our <span class="text-[#2E3192]">Mission</span>

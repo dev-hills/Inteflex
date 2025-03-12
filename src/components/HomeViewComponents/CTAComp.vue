@@ -16,11 +16,11 @@ export default {
 
 <template>
   <div class="mt-[80px] relative">
-    <TriangleOne class="absolute left-[480px] top-0" />
-    <TriangleTwo class="absolute bottom-[80px] left-0" />
-    <TriangleThree class="absolute bottom-0 right-0" />
+    <TriangleOne class="absolute left-[480px] top-0 sm:hidden" />
+    <TriangleTwo class="absolute bottom-[80px] left-0 sm:hidden" />
+    <TriangleThree class="absolute bottom-0 right-0 sm:hidden" />
     <div class="flex flex-col items-center gap-[22px] pt-[80px]">
-      <h1 class="text-[64px] text-[#2E2E2E] font-bold leading-[88px] text-center w-[80%]">
+      <h1 class="text-[64px] sm:text-[48px] text-[#2E2E2E] font-bold leading-[88px] sm:leading-[56px] text-center w-[80%] sm:w-[100%]">
         We’re here to provide the chemical solutions that power your industry.
       </h1>
 

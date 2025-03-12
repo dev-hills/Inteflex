@@ -9,8 +9,8 @@ import WhoWeAreComp from '@/components/HomeViewComponents/WhoWeAreComp.vue'
 
 <template>
   <main>
-    <main class="px-[112px] z-[1000] pt-[200px] py-[41px] w-[100%]">
-      <div class="flex flex-row items-center justify-between gap-[100px] w-[100%]">
+    <main class="px-[112px] sm:px-[20px] z-[1000] pt-[200px] sm:pt-[150px] py-[41px] w-[100%]">
+      <div class="flex flex-row sm:flex-col items-center justify-between gap-[100px] w-[100%]">
         <div>
           <h1 class="text-[#2E2E2E] font-bold text-[48px] leading-[72px]">
             Innovating Chemistry, Empowering Industry

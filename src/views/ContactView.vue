@@ -7,11 +7,15 @@ import MailIcon from '@/components/icons/MailIcon.vue'
 import TelephoneIcon from '@/components/icons/TelephoneIcon.vue'
 import CTAComp from '@/components/HomeViewComponents/CTAComp.vue'
 import FooterComp from '@/components/HomeViewComponents/FooterComp.vue'
+
+import { GoogleMap, Marker } from 'vue3-google-map'
+
+const center = { lat: 6.519416, lng: 3.334692 }
 </script>
 
 <template>
-  <main class="pt-[200px]">
-    <div class="py-[70px] px-[65px] w-[950px] mx-auto shadow-[0_20px_26px_12px_#10182814]">
+  <main class="pt-[200px] sm:pt-[120px]">
+    <div class="py-[70px] px-[65px] sm:px-[15px] w-[950px] mx-auto shadow-[0_20px_26px_12px_#10182814] sm:w-[100%]">
       <h1
         class="font-bold text-[24px] text-[#ED008C] border-[2.3px] border-[#ED008C] border-x-0 border-t-0 pb-[7px] w-fit text-center mx-auto"
       >
@@ -20,8 +24,8 @@ import FooterComp from '@/components/HomeViewComponents/FooterComp.vue'
 
       <h1 class="mb-[27px] mt-[57px] font-medium text-[20px] text-[#0F001A]">Leave us a message</h1>
 
-      <div class="mt-[27px] flex flex-row items-center justify-between gap-[50px]">
-        <div class="w-[50%]">
+      <div class="mt-[27px] flex flex-row sm:flex-col items-center justify-between gap-[50px]">
+        <div class="w-[50%] sm:w-[100%]">
           <input
             type="text"
             class="border-[1.2px] border-[#B4BEC8] w-[100%] rounded-[4px] p-[15px] outline-none"
@@ -47,7 +51,7 @@ import FooterComp from '@/components/HomeViewComponents/FooterComp.vue'
           </button>
         </div>
 
-        <div class="w-[50%] flex flex-col items-start">
+        <div class="w-[50%] sm:w-[100%] flex flex-col items-start">
           <div class="flex flex-row items-start gap-[20px]">
             <LocationMarker />
 
@@ -83,14 +87,22 @@ import FooterComp from '@/components/HomeViewComponents/FooterComp.vue'
             <IGPurple />
           </div>
 
-          <div class="mt-[43px]">
-            <img src="@/assets/MapPlaceholder.png" alt="" />
+          <div class="mt-[43px] w-[100%] h-[180px]">
+            <GoogleMap
+              api-key="AIzaSyCl1XVrwoqrskD6SJueyIBb63NlBskExl0"
+              style="width: 100%; height: 180px"
+              :center="center"
+              :zoom="15"
+            >
+              <Marker :options="{ position: center }" />
+            </GoogleMap>
+            <!-- <img src="@/assets/MapPlaceholder.png" alt="" /> -->
           </div>
         </div>
       </div>
     </div>
 
-    <div class="px-[112px] mt-[172px] mb-[107px]">
+    <div class="px-[112px] sm:px-[20px] mt-[172px] mb-[107px]">
       <CTAComp />
     </div>
 

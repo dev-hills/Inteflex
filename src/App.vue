@@ -1,5 +1,5 @@
 <script setup>
-import { watch, computed } from 'vue'
+import { watch, computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import PhoneIcon from './components/icons/PhoneIcon.vue'
 
@@ -10,18 +10,20 @@ watch(() => {
 })
 
 const isActiveRoute = (path) => computed(() => route.path === path)
+
+const showNav = ref(false)
 </script>
 
 <template>
   <main class="relative">
     <nav
-      class="bg-white w-[100%] flex flex-row items-center justify-between py-[41px] px-[112px] fixed z-[100]"
+      class="bg-white w-[100%] flex flex-row items-center justify-between py-[41px] sm:py-[20px] px-[112px] sm:px-[20px] fixed z-[100]"
     >
       <RouterLink to="/">
         <img src="@/assets/logo.svg" alt="Vue logo" />
       </RouterLink>
 
-      <div class="flex flex-row items-center gap-[30px]">
+      <div class="sm:hidden flex flex-row items-center gap-[30px]">
         <div
           class="flex flex-row items-center gap-[30px] border-[1px] border-[#DAD8D8] border-y-0 border-l-0 pr-[40px]"
         >
@@ -71,7 +73,62 @@ const isActiveRoute = (path) => computed(() => route.path === path)
           <p class="font-semibold text-[16px] text-black">+2348022539367</p>
         </div>
       </div>
+
+      <div @click="showNav = !showNav" class="hidden sm:flex sm:flex-col sm:gap-[5px]">
+        <div class="w-[40px] h-[4px] bg-[#2E3192]"></div>
+        <div class="w-[40px] h-[4px] bg-[#2E3192]"></div>
+        <div class="w-[40px] h-[4px] bg-[#2E3192]"></div>
+      </div>
     </nav>
+
+    <div :class="showNav ? `block` : `hidden`">
+      <div class="absolute bg-white w-[100%] z-[1000] mt-[90px] py-[30px]">
+        <div class="flex flex-col items-center gap-[30px]">
+          <RouterLink
+            to="/"
+            class="font-semibold text-[15px] text-black px-[12px] pb-[4px]"
+            :class="{
+              'border-[2px] border-[#0EB0F1] border-x-0 border-t-0': isActiveRoute('/').value,
+              '': !isActiveRoute('/').value,
+            }"
+            @click="showNav = false"
+            >Home</RouterLink
+          >
+          <RouterLink
+            to="/about"
+            class="font-semibold text-[15px] text-black px-[12px] pb-[4px]"
+            :class="{
+              'border-[2px] border-[#0EB0F1] border-x-0 border-t-0': isActiveRoute('/about').value,
+              '': !isActiveRoute('/about').value,
+            }"
+            @click="showNav = false"
+            >About Us</RouterLink
+          >
+          <RouterLink
+            to="/products"
+            class="font-semibold text-[15px] text-black px-[12px] pb-[4px]"
+            :class="{
+              'border-[2px] border-[#0EB0F1] border-x-0 border-t-0':
+                isActiveRoute('/products').value,
+              '': !isActiveRoute('/products').value,
+            }"
+            @click="showNav = false"
+            >Products</RouterLink
+          >
+          <RouterLink
+            to="/contact"
+            class="font-semibold text-[15px] text-black px-[12px] pb-[4px]"
+            :class="{
+              'border-[2px] border-[#0EB0F1] border-x-0 border-t-0':
+                isActiveRoute('/contact').value,
+              '': !isActiveRoute('/contact').value,
+            }"
+            @click="showNav = false"
+            >Contact Us</RouterLink
+          >
+        </div>
+      </div>
+    </div>
 
     <RouterView />
   </main>
