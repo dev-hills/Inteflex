@@ -196,14 +196,14 @@ export const productData = {
       category: 'Water Treatment',
       title: 'Aluminium Sulphate',
       description: 'A coagulant used in water purification to remove impurities and clarify water.',
-      image: '/public/product-image/productImage10.jpg',
+      image: '/public/product-image/productImage35.jpg',
     },
     {
       category: 'Water Treatment',
       title: 'Calcium Hypochlorite',
       description:
         'A disinfectant and bleaching agent used in water treatment to kill bacteria and sanitize..',
-      image: '/public/product-image/productImage11.jpg',
+      image: '/public/product-image/productImage36.jpg',
     },
     {
       category: 'Water Treatment',

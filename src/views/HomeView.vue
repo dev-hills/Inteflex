@@ -22,16 +22,20 @@ import WhoWeAreComp from '@/components/HomeViewComponents/WhoWeAreComp.vue'
             sectors.
           </p>
           <div class="flex flex-row items-center gap-[20px]">
-            <button
-              class="bg-[#2E3192] text-white font-normal text-[14px] px-[20px] py-[10px] rounded-[8px]"
-            >
-              Explore Our Products
-            </button>
-            <button
-              class="bg-transparent border-[1px] border-black text-black font-normal text-[14px] px-[41px] py-[10px] rounded-[8px]"
-            >
-              Contact us
-            </button>
+            <RouterLink to="/products">
+              <button
+                class="bg-[#2E3192] text-white font-normal text-[14px] px-[20px] py-[10px] rounded-[8px]"
+              >
+                Explore Our Products
+              </button>
+            </RouterLink>
+            <RouterLink to="/contact">
+              <button
+                class="bg-transparent border-[1px] border-black text-black font-normal text-[14px] px-[41px] py-[10px] rounded-[8px]"
+              >
+                Contact us
+              </button>
+            </RouterLink>
           </div>
         </div>
         <img src="@/assets/homeImg.svg" alt="" />

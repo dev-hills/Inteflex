@@ -18,7 +18,7 @@ import { industriesData } from '../../../utils/industriesData'
     </div>
 
     <div
-      class="w-[100%] flex flex-row items-center gap-[48px] sm:gap-[10px]  pt-[140px] sm:pt-[100px] overflow-x-auto scrollbar-hide"
+      class="w-[100%] flex flex-row items-center gap-[48px] sm:gap-[10px] pt-[140px] sm:pt-[100px] overflow-x-auto scrollbar-hide"
     >
       <div v-for="(item, index) in industriesData" :key="index">
         <div
