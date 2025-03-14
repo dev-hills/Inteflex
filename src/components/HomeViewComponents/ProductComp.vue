@@ -64,7 +64,8 @@
       </div>
 
       <button
-        class="p-[12px] border-[1px] border-black rounded-[8px] w-[160px] mt-[40px] flex items-center justify-center"
+        @click="$router.push(`/products`)"
+        class="p-[12px] border-[1px] border-black rounded-[8px] w-[160px] mt-[40px] flex items-center justify-center cursor-pointer"
       >
         View more
       </button>
