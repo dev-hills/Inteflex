@@ -56,7 +56,8 @@ loadImages()
 <template>
   <main class="relative">
     <div v-if="!isLoaded" class="flex items-center justify-center h-screen">
-      <p class="text-lg font-semibold"><img src="@/assets/logo.svg" alt="logo" /></p>
+      <img src="@/assets/logo.svg" alt="logo" />
+      <p class="text-lg font-semibold">Loading...</p>
     </div>
 
     <nav
