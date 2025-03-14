@@ -9,15 +9,15 @@ const imageCount = ref(0)
 const totalImages = ref(0)
 const router = useRouter()
 
-const isActiveRoute = (path) => computed(() => {
-  if (path === '/products') {
-    return route.path.startsWith('/products') || route.path.startsWith('/product/')
-  }
-  return route.path === path
-})
+const isActiveRoute = (path) =>
+  computed(() => {
+    if (path === '/products') {
+      return route.path.startsWith('/products') || route.path.startsWith('/product/')
+    }
+    return route.path === path
+  })
 
 const showNav = ref(false)
-
 
 const checkImagesLoaded = () => {
   imageCount.value++
@@ -25,7 +25,6 @@ const checkImagesLoaded = () => {
     isLoaded.value = true
   }
 }
-
 
 const loadImages = () => {
   isLoaded.value = false
@@ -47,11 +46,9 @@ const loadImages = () => {
   }
 }
 
-
 watch(router.currentRoute, () => {
   loadImages()
 })
-
 
 loadImages()
 </script>
@@ -61,6 +58,7 @@ loadImages()
     <div v-if="!isLoaded" class="flex items-center justify-center h-screen">
       <p class="text-lg font-semibold"><img src="@/assets/logo.svg" alt="logo" /></p>
     </div>
+
     <nav
       class="bg-white w-[100%] flex flex-row items-center justify-between py-[41px] sm:py-[20px] px-[112px] sm:px-[20px] fixed z-[100]"
     >
@@ -127,7 +125,7 @@ loadImages()
     </nav>
 
     <div :class="showNav ? `block` : `hidden`">
-      <div class="absolute bg-white w-[100%] z-[1000] mt-[90px] py-[30px]">
+      <div class="fixed bg-white w-[100%] z-[1000] mt-[90px] py-[30px]">
         <div class="flex flex-col items-center gap-[30px]">
           <RouterLink
             to="/"

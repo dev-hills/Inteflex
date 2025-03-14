@@ -7,9 +7,17 @@ import { productData } from '../../utils/Products'
 
 const route = useRoute()
 const productName = ref(route.params.productname)
+const imageLoading = ref({}) // Track loading state for each image
 
 watchEffect(() => {
   productName.value = route.params.productname
+  // Reset image loading states when product changes
+  if (productData[productName.value]) {
+    imageLoading.value = productData[productName.value].reduce((acc, item, index) => {
+      acc[index] = true
+      return acc
+    }, {})
+  }
 })
 
 const productTitle = computed(() => {
@@ -22,6 +30,10 @@ const productTitle = computed(() => {
   }
   return titles[productName.value] || ''
 })
+
+const handleImageLoaded = (index) => {
+  imageLoading.value[index] = false
+}
 </script>
 
 <template>
@@ -40,11 +52,20 @@ const productTitle = computed(() => {
               <div
                 class="pt-[24px] px-[24px] sm:px-[15px] pb-[32px] rounded-[8px] w-[384px] h-0[500px] shadow-[0_10px_16px_-2px_#10182814]"
               >
-                <img
-                  :src="item.image"
-                  :alt="item.name"
-                  class="w-[326px] sm:w-[100%] h-[275px] object-cover"
-                />
+                <div class="relative w-[326px] sm:w-full h-[275px]">
+                  <div
+                    v-if="imageLoading[index]"
+                    class="absolute inset-0 bg-gray-200 animate-pulse rounded"
+                  ></div>
+
+                  <img
+                    :src="item.image"
+                    :alt="item.name"
+                    class="w-full h-full object-cover"
+                    :class="{ 'opacity-0': imageLoading[index] }"
+                    @load="handleImageLoaded(index)"
+                  />
+                </div>
 
                 <div class="mt-[32px]">
                   <p class="font-medium text-[14px] text-[#1A906B]">{{ item.category }}</p>
@@ -73,3 +94,19 @@ const productTitle = computed(() => {
     <FooterComp />
   </main>
 </template>
+
+<style scoped>
+.animate-pulse {
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+</style>
