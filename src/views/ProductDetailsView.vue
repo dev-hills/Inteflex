@@ -41,7 +41,7 @@ const productTitle = computed(() => {
                 class="pt-[24px] px-[24px] sm:px-[15px] pb-[32px] rounded-[8px] w-[384px] h-0[500px] shadow-[0_10px_16px_-2px_#10182814]"
               >
                 <img
-                  :src="item.image"
+                 :src="item.image"
                   alt=""
                   class="w-[326px] sm:w-[100%] h-[275px] object-cover"
                 />
