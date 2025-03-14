@@ -27,7 +27,17 @@ const router = createRouter({
       name: 'contact',
       component: () => import('../views/ContactView.vue'),
     },
+    {
+      path: '/products/:productname',
+      name: 'product-details',
+      component: () => import('../views/ProductDetailsView.vue'),
+      props: true,
+    },
   ],
+  // eslint-disable-next-line no-unused-vars
+  scrollBehavior(_, __, ___) {
+    return { top: 0, behavior: 'smooth' }
+  },
 })
 
 export default router

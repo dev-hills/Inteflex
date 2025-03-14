@@ -1,26 +1,71 @@
 <script setup>
-import { watch, computed, ref } from 'vue'
-import { useRoute } from 'vue-router'
+import { computed, ref, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import PhoneIcon from './components/icons/PhoneIcon.vue'
 
 const route = useRoute()
+const isLoaded = ref(false)
+const imageCount = ref(0)
+const totalImages = ref(0)
+const router = useRouter()
 
-watch(() => {
-  console.log('Current route:', route.path)
+const isActiveRoute = (path) => computed(() => {
+  if (path === '/products') {
+    return route.path.startsWith('/products') || route.path.startsWith('/product/')
+  }
+  return route.path === path
 })
 
-const isActiveRoute = (path) => computed(() => route.path === path)
-
 const showNav = ref(false)
+
+
+const checkImagesLoaded = () => {
+  imageCount.value++
+  if (imageCount.value >= totalImages.value) {
+    isLoaded.value = true
+  }
+}
+
+
+const loadImages = () => {
+  isLoaded.value = false
+  imageCount.value = 0
+  const images = document.querySelectorAll('img')
+  totalImages.value = images.length
+
+  if (totalImages.value === 0) {
+    isLoaded.value = true
+  } else {
+    images.forEach((img) => {
+      if (img.complete) {
+        checkImagesLoaded()
+      } else {
+        img.addEventListener('load', checkImagesLoaded)
+        img.addEventListener('error', checkImagesLoaded)
+      }
+    })
+  }
+}
+
+
+watch(router.currentRoute, () => {
+  loadImages()
+})
+
+
+loadImages()
 </script>
 
 <template>
   <main class="relative">
+    <div v-if="!isLoaded" class="flex items-center justify-center h-screen">
+      <p class="text-lg font-semibold"><img src="@/assets/logo.svg" alt="logo" /></p>
+    </div>
     <nav
       class="bg-white w-[100%] flex flex-row items-center justify-between py-[41px] sm:py-[20px] px-[112px] sm:px-[20px] fixed z-[100]"
     >
       <RouterLink to="/">
-        <img src="@/assets/logo.svg" alt="Vue logo" />
+        <img src="@/assets/logo.svg" alt="logo" />
       </RouterLink>
 
       <div class="sm:hidden flex flex-row items-center gap-[30px]">

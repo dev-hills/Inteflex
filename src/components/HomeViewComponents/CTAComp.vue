@@ -18,7 +18,7 @@ const router = useRouter()
       <h1
         class="text-[64px] sm:text-[48px] text-[#2E2E2E] font-bold leading-[88px] sm:leading-[56px] text-center w-[80%] sm:w-[100%]"
       >
-        We’re here to provide the chemical solutions that power your industry.
+        We&apos;re here to provide the chemical solutions that power your industry.
       </h1>
 
       <button

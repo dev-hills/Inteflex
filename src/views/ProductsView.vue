@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import FooterComp from '@/components/HomeViewComponents/FooterComp.vue'
 import { productData } from '../../utils/Products'
-import CTAComp from '@/components/HomeViewComponents/CTAComp.vue';
+import CTAComp from '@/components/HomeViewComponents/CTAComp.vue'
 </script>
 
 <template>
@@ -16,7 +16,7 @@ import CTAComp from '@/components/HomeViewComponents/CTAComp.vue';
           <div
             class="w-[100%] flex flex-row items-center gap-[48px] sm:gap-[10px] pt-[20px] overflow-x-auto scrollbar-hide"
           >
-            <div v-for="(item, index) in productData.agroChemicals.slice(0, 3)" :key="index">
+            <div v-for="(item, index) in productData['agro-chemicals'].slice(0, 3)" :key="index">
               <div
                 class="pt-[24px] px-[24px] sm:px-[15px] pb-[32px] rounded-[8px] w-[384px] h-0[500px] shadow-[0_10px_16px_-2px_#10182814]"
               >
@@ -44,7 +44,8 @@ import CTAComp from '@/components/HomeViewComponents/CTAComp.vue';
           </div>
 
           <div
-            class="border-[1px] border-black w-[160px] px-[44px] py-[12px] text-[14px] rounded-[8px] flex items-center justify-center mx-auto mt-[40px]"
+            @click="$router.push(`/products/agro-chemicals`)"
+            class="border-[1px] border-black w-[160px] px-[44px] py-[12px] text-[14px] rounded-[8px] flex items-center justify-center mx-auto mt-[40px] cursor-pointer"
           >
             View More
           </div>
@@ -84,7 +85,8 @@ import CTAComp from '@/components/HomeViewComponents/CTAComp.vue';
           </div>
 
           <div
-            class="border-[1px] border-black w-[160px] px-[44px] py-[12px] text-[14px] rounded-[8px] flex items-center justify-center mx-auto mt-[40px]"
+            @click="$router.push(`/products/plastics`)"
+            class="border-[1px] border-black w-[160px] px-[44px] py-[12px] text-[14px] rounded-[8px] flex items-center justify-center mx-auto mt-[40px] cursor-pointer"
           >
             View More
           </div>
@@ -124,7 +126,8 @@ import CTAComp from '@/components/HomeViewComponents/CTAComp.vue';
           </div>
 
           <div
-            class="border-[1px] border-black w-[160px] px-[44px] py-[12px] text-[14px] rounded-[8px] flex items-center justify-center mx-auto mt-[40px]"
+            @click="$router.push(`/products/food`)"
+            class="border-[1px] border-black w-[160px] px-[44px] py-[12px] text-[14px] rounded-[8px] flex items-center justify-center mx-auto mt-[40px] cursor-pointer"
           >
             View More
           </div>
@@ -136,7 +139,7 @@ import CTAComp from '@/components/HomeViewComponents/CTAComp.vue';
           <div
             class="w-[100%] flex flex-row items-center gap-[48px] sm:gap-[10px] pt-[20px] overflow-x-auto scrollbar-hide"
           >
-            <div v-for="(item, index) in productData.oilField.slice(0, 3)" :key="index">
+            <div v-for="(item, index) in productData['oil-field'].slice(0, 3)" :key="index">
               <div
                 class="pt-[24px] px-[24px] sm:px-[15px] pb-[32px] rounded-[8px] w-[384px] h-0[500px] shadow-[0_10px_16px_-2px_#10182814]"
               >
@@ -164,7 +167,8 @@ import CTAComp from '@/components/HomeViewComponents/CTAComp.vue';
           </div>
 
           <div
-            class="border-[1px] border-black w-[160px] px-[44px] py-[12px] text-[14px] rounded-[8px] flex items-center justify-center mx-auto mt-[40px]"
+            @click="$router.push(`/products/oil-field`)"
+            class="border-[1px] border-black w-[160px] px-[44px] py-[12px] text-[14px] rounded-[8px] flex items-center justify-center mx-auto mt-[40px] cursor-pointer"
           >
             View More
           </div>
@@ -176,7 +180,7 @@ import CTAComp from '@/components/HomeViewComponents/CTAComp.vue';
           <div
             class="w-[100%] flex flex-row items-center gap-[48px] sm:gap-[10px] pt-[20px] overflow-x-auto scrollbar-hide"
           >
-            <div v-for="(item, index) in productData.waterTreatment.slice(0, 3)" :key="index">
+            <div v-for="(item, index) in productData['water-treatment'].slice(0, 3)" :key="index">
               <div
                 class="pt-[24px] px-[24px] sm:px-[15px] pb-[32px] rounded-[8px] w-[384px] h-0[500px] shadow-[0_10px_16px_-2px_#10182814]"
               >
@@ -204,7 +208,8 @@ import CTAComp from '@/components/HomeViewComponents/CTAComp.vue';
           </div>
 
           <div
-            class="border-[1px] border-black w-[160px] px-[44px] py-[12px] text-[14px] rounded-[8px] flex items-center justify-center mx-auto mt-[40px]"
+            @click="$router.push(`/products/water-treatment`)"
+            class="border-[1px] border-black w-[160px] px-[44px] py-[12px] text-[14px] rounded-[8px] flex items-center justify-center mx-auto mt-[40px cursor-pointer"
           >
             View More
           </div>
