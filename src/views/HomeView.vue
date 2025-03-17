@@ -2,7 +2,7 @@
 import FooterComp from '@/components/HomeViewComponents/FooterComp.vue'
 import CTAComp from '@/components/HomeViewComponents/CTAComp.vue'
 import ProductComp from '@/components/HomeViewComponents/ProductComp.vue'
-import TestimonialComp from '@/components/HomeViewComponents/TestimonialComp.vue'
+// import TestimonialComp from '@/components/HomeViewComponents/TestimonialComp.vue'
 import WhatWeDoComp from '@/components/HomeViewComponents/WhatWeDoComp.vue'
 import WhoWeAreComp from '@/components/HomeViewComponents/WhoWeAreComp.vue'
 </script>

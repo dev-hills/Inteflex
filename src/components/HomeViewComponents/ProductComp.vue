@@ -8,7 +8,7 @@
         <div
           class="pt-[24px] px-[24px] pb-[32px] rounded-[8px] w-[384px] h-0[500px] shadow-[0_10px_16px_-2px_#10182814]"
         >
-          <img src="../../assets/productPlacholder.png" alt="" />
+          <img src="../../../public/productImage9.JPG" alt="" />
 
           <div class="mt-[32px]">
             <p class="font-medium text-[14px] text-[#1A906B]">Food</p>
@@ -27,7 +27,7 @@
         <div
           class="pt-[24px] px-[24px] pb-[32px] rounded-[8px] w-[384px] h-0[500px] shadow-[0_10px_16px_-2px_#10182814]"
         >
-          <img src="../../assets/productPlacholder.png" alt="" />
+          <img src="../../../public/productImage17.JPG" alt="" />
 
           <div class="mt-[32px]">
             <p class="font-medium text-[14px] text-[#1A906B]">Agro Chemicals:</p>
@@ -46,7 +46,7 @@
         <div
           class="pt-[24px] px-[24px] pb-[32px] rounded-[8px] w-[384px] h-0[500px] shadow-[0_10px_16px_-2px_#10182814]"
         >
-          <img src="../../assets/productPlacholder.png" alt="" />
+          <img src="../../../public/productImage18.JPG" alt="" />
 
           <div class="mt-[32px]">
             <p class="font-medium text-[14px] text-[#1A906B]">Plastics</p>

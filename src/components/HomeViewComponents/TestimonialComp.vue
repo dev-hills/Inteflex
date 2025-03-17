@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 import JPNL from '../icons/JPNL.vue'
 import JrangIcon from '../icons/JrangIcon.vue'
 import KoraneIcon from '../icons/KoraneIcon.vue'
@@ -111,4 +111,4 @@ export default {
       <JrangIcon />
     </div>
   </div>
-</template>
+</template> -->
